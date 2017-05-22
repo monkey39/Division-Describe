@@ -15,12 +15,11 @@ class SpiderMain(object):
         self.outputer = html_outputer.HtmlOutputer()  # html_outputer
 
     def craw(self, root_url):
-        count = 1
         # put root_url in url_manager
-        self.urls.add_new_url(root_url)
+        self.urls.add_main_url(root_url)
 
 
 if __name__ == "__main__":
     root_url = "http://baike.baidu.com/item/行政区划"  # this link is the entrance of provinces in china.
     obj_spider = SpiderMain()
-    obj_spider.craw(root_url)  # 启动爬虫
+    obj_spider.craw(root_url)  # begin scraping
